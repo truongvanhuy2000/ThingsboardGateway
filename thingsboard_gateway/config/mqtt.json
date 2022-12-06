@@ -2,15 +2,13 @@
   "broker": {
     "name": "Default Local Broker",
     "host": "127.0.0.1",
-    "port": 1883,
+    "port": 1885,
     "clientId": "ThingsBoard_gateway",
     "version": 5,
     "maxMessageNumberPerWorker": 10,
     "maxNumberOfWorkers": 100,
     "security": {
-      "type": "basic",
-      "username": "user",
-      "password": "password"
+      "type": "anonymous"
     }
   },
   "mapping": [
@@ -152,8 +150,8 @@
   "attributeUpdates": [
     {
       "retain": true,
-      "deviceNameFilter": "SmartMeter.*",
-      "attributeFilter": "uploadFrequency",
+      "deviceNameFilter": "SN.*",
+      "attributeFilter": "FirmwareVersion",
       "topicExpression": "sensor/${deviceName}/${attributeKey}",
       "valueExpression": "{\"${attributeKey}\":\"${attributeValue}\"}"
     }

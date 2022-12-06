@@ -2,7 +2,7 @@
   "name": "Custom serial connector",
   "devices": [
     {
-      "name": "CustomSerialDevice1",
+      "name": "SN-001",
       "type": "default",
       "port": "/dev/ttyUSB0",
       "baudrate": 9600,
@@ -18,7 +18,7 @@
         {
           "key": "SerialNumber",
           "type": "string",
-          "fromByte": 4,
+          "fromDelimiter": "\r",
           "toByte": -1
         }
       ],

@@ -157,10 +157,12 @@ class MqttConnector(Connector, Thread):
 
         self._mqtt_version = self.__broker.get('version', 5)
         try:
-            self._client = Client(client_id, protocol=MQTT_VERSIONS[self._mqtt_version])
+            #self._client = Client(client_id, protocol=MQTT_VERSIONS[self._mqtt_version])
+            self._client = Client(client_id)
         except KeyError:
             self.__log.error('Unknown MQTT version. Starting up on version 5...')
-            self._client = Client(client_id, protocol=MQTTv5)
+            #self._client = Client(client_id, protocol=MQTTv5)
+            self._client = Client(client_id)
             self._mqtt_version = 5
 
         self.setName(config.get("name", self.__broker.get(

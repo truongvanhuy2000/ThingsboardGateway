@@ -39,12 +39,12 @@ class CustomSerialUplinkConverter(Converter):
                     if config_object.get('toByte') is not None:
                         to_byte = config_object.get('toByte')
                         if to_byte == -1:
-                            to_byte = len(data) - 1
+                            to_byte = len(data_to_convert) - 1
                         data_to_convert = data_to_convert[:to_byte]
                     if config_object.get('fromByte') is not None:
                         from_byte = config_object.get('fromByte')
                         data_to_convert = data_to_convert[from_byte:]
                     converted_data = {config_object['key']: data_to_convert.decode('UTF-8')}
                     self.result_dict[key].append(converted_data)
-        log.debug("Converted data: %s", self.result_dict)
+        log.info("Converted data: %s", self.result_dict)
         return self.result_dict

@@ -145,7 +145,7 @@ class TBGatewayService:
             logging_error = e
         global log
         log = logging.getLogger('service')
-        log.info("Gateway starting...")
+        log.info("\n\n\nGateway starting...\n\n\n")
         self.__updater = TBUpdater()
         self.__updates_check_period_ms = 300000
         self.__updates_check_time = 0

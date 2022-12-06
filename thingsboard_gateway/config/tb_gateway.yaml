@@ -1,12 +1,12 @@
 thingsboard:
-  host: thingsboard.cloud
+  host: localhost
   port: 1883
   remoteShell: false
   remoteConfiguration: false
   statistics:
     enable: true
     statsSendPeriodInSeconds: 3600
-#    configuration: statistics/statistics_linux.json
+  #    configuration: statistics/statistics_linux.json
   maxPayloadSizeBytes: 1024
   minPackSendDelayMS: 200
   checkConnectorsConfigurationInSeconds: 60
@@ -16,7 +16,7 @@ thingsboard:
     inactivityTimeoutSeconds: 120
     inactivityCheckPeriodSeconds: 10
   security:
-    accessToken: PUT_YOUR_GW_ACCESS_TOKEN_HERE
+    accessToken: avVZ9Tgh6MT5TPfzv4fw
   qos: 1
 storage:
   type: memory
@@ -41,94 +41,92 @@ grpc:
   minTimeBetweenPingsMs: 10000
   minPingIntervalWithoutDataMs: 5000
 connectors:
-  -
-    name: MQTT Broker Connector
-    type: mqtt
-    configuration: mqtt.json
-
-#  -
-#    name: Modbus Connector
-#    type: modbus
-#    configuration: modbus.json
-#
-#  -
-#    name: Modbus Connector
-#    type: modbus
-#    configuration: modbus_serial.json
-#
-#  -
-#    name: OPC-UA Connector
-#    type: opcua
-#    configuration: opcua.json
-#
-#  -
-#    name: OPC-UA Connector
-#    type: opcua_asyncio
-#    configuration: opcua.json
-#
-#  -
-#    name: BLE Connector
-#    type: ble
-#    configuration: ble.json
-#
-#  -
-#    name: REQUEST Connector
-#    type: request
-#    configuration: request.json
-#
-#  -
-#    name: CAN Connector
-#    type: can
-#    configuration: can.json
-#
-#  -
-#    name: BACnet Connector
-#    type: bacnet
-#    configuration: bacnet.json
-#
-#  -
-#    name: ODBC Connector
-#    type: odbc
-#    configuration: odbc.json
-#
-#  -
-#    name: REST Connector
-#    type: rest
-#    configuration: rest.json
-#
-#  -
-#    name: SNMP Connector
-#    type: snmp
-#    configuration: snmp.json
-#
-#  -
-#    name: FTP Connector
-#    type: ftp
-#    configuration: ftp.json
-#
-#  -
-#    name: Socket TCP/UDP Connector
-#    type: socket
-#    configuration: socket.json
-#
-#  -
-#    name: XMPP Connector
-#    type: xmpp
-#    configuration: xmpp.json
-#
-#  -
-#   name: OCPP Connector
-#   type: ocpp
-#   configuration: ocpp.json
-#
-# ========= Customization ==========
-#
-#
-#  -
-#    name: Custom Serial Connector
-#    type: serial
-#    configuration: custom_serial.json
-#    class: CustomSerialConnector
+  #   - name: MQTT Broker Connector
+  #     type: mqtt
+  #     configuration: mqtt.json
+  #  -
+  #    name: Modbus Connector
+  #    type: modbus
+  #    configuration: modbus.json
+  #
+  #  -
+  #    name: Modbus Connector
+  #    type: modbus
+  #    configuration: modbus_serial.json
+  #
+  #  -
+  #    name: OPC-UA Connector
+  #    type: opcua
+  #    configuration: opcua.json
+  #
+  #  -
+  #    name: OPC-UA Connector
+  #    type: opcua_asyncio
+  #    configuration: opcua.json
+  #
+  #  -
+  #    name: BLE Connector
+  #    type: ble
+  #    configuration: ble.json
+  #
+  #  -
+  #    name: REQUEST Connector
+  #    type: request
+  #    configuration: request.json
+  #
+  #  -
+  #    name: CAN Connector
+  #    type: can
+  #    configuration: can.json
+  #
+  #  -
+  #    name: BACnet Connector
+  #    type: bacnet
+  #    configuration: bacnet.json
+  #
+  #  -
+  #    name: ODBC Connector
+  #    type: odbc
+  #    configuration: odbc.json
+  #
+  #  -
+  #    name: REST Connector
+  #    type: rest
+  #    configuration: rest.json
+  #
+  #  -
+  #    name: SNMP Connector
+  #    type: snmp
+  #    configuration: snmp.json
+  #
+  #  -
+  #    name: FTP Connector
+  #    type: ftp
+  #    configuration: ftp.json
+  #
+  #  -
+  #    name: Socket TCP/UDP Connector
+  #    type: socket
+  #    configuration: socket.json
+  #
+  #  -
+  #    name: XMPP Connector
+  #    type: xmpp
+  #    configuration: xmpp.json
+  #
+  #  -
+  #   name: OCPP Connector
+  #   type: ocpp
+  #   configuration: ocpp.json
+  #
+  # ========= Customization ==========
+  #
+  #
+   -
+    name: Custom Serial Connector
+    type: serial
+    configuration: custom_serial.json
+    class: CustomSerialConnector
 #
 #  -
 #    name: GRPC Connector 1
